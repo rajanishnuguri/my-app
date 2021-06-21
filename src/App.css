@@ -1,10 +1,15 @@
-@import url('http://fonts.cdnfonts.com/css/agustina'); 
+@font-face {
+    font-family: 'Agustina Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Agustina Regular'), url('./fonts/Agustina.woff') format('woff');
+    }
  
  
  .logo-name {
     font-weight: 700;
-    font-family:   Agustina , sans-serif ;
-
+    font-family:   Agustina Regular ; 
+	
 }
  .logo {
     display: block;
