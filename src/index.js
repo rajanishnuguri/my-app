@@ -1,21 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
-import Intro from './Components/Intro';
-import Skills from './Components/Skills';
-import Education from './Components/Education';
-import Experience from './Components/Experience';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
   <div style={{display:"block"}}>
-    <App />
-    <Intro />
-    <Skills/>
-	<Education/>
-	<Experience />
+     <BrowserRouter>
+        <App />
+    </BrowserRouter>
     </div>
   </React.StrictMode>,
   document.getElementById('root')

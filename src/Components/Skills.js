@@ -19,18 +19,18 @@ const skills = [
     <span style={{color:"#ffffff",fontSize : '30px',fontWeight: "600"}}>Proficiency</span>
            {skills.sort((a, b) => (a.rating < b.rating) ? 1 : -1).map(skill  => {
            return(
-                 <div style={{display: "flex"}}>
+                 <div style={{display: "flex",marginBottom:"-15%",marginTop:"7%"}}>
                    
-					<div  style={{color:"#ffffff",backgroundColor:"green",textAlign:"center",marginTop:"65px",lineHeight:"30px",marginRight: "0px",height: "20%", width: "100px",boxSizing: "border-box"}}>
+					<div  style={{color:"#ffffff",backgroundColor:"green",textAlign:"center",marginTop:"54px",lineHeight:"25px",marginRight: "0px",height: "20%", width: "100px",boxSizing: "border-box"}}>
 					{skill.name}</div>
 					<ProgressBar
-        width="75%"
-        height="30px"
+        width="60%"
+        height="25px"
         rect
-        fontColor="gray"
+        fontColor="#000000"
         percentage={skill.rating}
         trackPathColor="transparent"
-        bgColor="#333333"
+        backgroundColor="green"
         trackBorderColor="grey"
       />
                   </div>

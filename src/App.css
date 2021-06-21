@@ -78,14 +78,10 @@ display:flex;
 .skill-main{
 padding-left: 50px;
 padding-right: 50px;
+padding-top: 100px;
 }
-.skill-main meter{
-width: 90%;
-height: 40px;
-}
-.skill-main p{
-font-size: 25px;
-}
+
+
 @media (min-width: 48em){
  .menu {
     max-height: none;
