@@ -19,6 +19,9 @@ constructor(props) {
    handleDrawerClose= () => {
    this.setState({open: false});
   }
+   handleChange(e) { 
+    console.log(e.target.getAttribute("value"));
+  }
 render(){
 
 
@@ -37,7 +40,7 @@ return (
     <Grid >
     <div id="menu" className="menu">
      <ul>
-        <li><a href="#About Me">About Me</a></li>
+        <li><a href="#About Me" value="Intro" onClick={(e) => this.handleChange(e)}>About Me</a></li>
         <li><a href="#Skills">Skills</a></li>
         <li><a href="#Experience">Experience</a></li>
         <li><a href="#Achievements">Achievements</a></li>

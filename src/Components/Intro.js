@@ -1,11 +1,10 @@
-import React, {Component} from 'react';
+import React  from 'react';
 import {Paper } from '@material-ui/core';
 
-class Intro extends Component{
-render(){
-    return(
 
-    <div className="intro-main">
+export default function Inro(){
+  return(
+	 <div className="intro-main">
 
     <span style={{color:"#ffffff",fontSize : '40px',fontWeight: "600",display:"flex"}}>Hi there, I&lsquo;m Rajanish Nuguri<br /></span>
     <br /><br /><br />
@@ -19,13 +18,13 @@ render(){
              <span style={{color:"#737373"}}>for REST API&lsquo;s using springboot and TIBCO and some other cool </span>
              <span style={{color:"#ffffff"}}>frameworks</span><br /><br />
              <div style={{display: "flex"}}>
-                     <a href="https://github.com/rajanishnuguri"  target="_blank" rel="noreferrer">
+                     <a href="https://github.com/rajanishnuguri"  target="_blank" rel="noopener noreferrer">
                      <i className="fa fa-github" ></i>
                      </a>
-                     <a href="https://www.linkedin.com/in/rajanishnuguri"  target="_blank" rel="noreferrer">
+                     <a href="https://www.linkedin.com/in/rajanishnuguri"  target="_blank" rel="noopener noreferrer">
                      <i className="fab fa-linkedin-in" ></i>
                      </a>
-                     <a href="mailto:rajanish.icon@gmail.com"  target="_blank" rel="noreferrer">
+                     <a href="mailto:rajanish.icon@gmail.com"  target="_blank" rel="noopener noreferrer">
                      <i className="fab fa-google" ></i>
                      </a>
               </div><br />
@@ -40,11 +39,7 @@ render(){
             <span style={{color:"#737373",fontSize : '13px',fontWeight: "550"}}>Senior Associate Consultant</span><br /><br />
         </Paper>
         </div>
-
-
     </div>
+	
     );
 }
-
-}
-export default Intro;

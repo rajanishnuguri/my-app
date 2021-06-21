@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import Intro from './Components/Intro';
 import Skills from './Components/Skills';
+import Education from './Components/Education';
+import Experience from './Components/Experience';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
@@ -12,6 +14,8 @@ ReactDOM.render(
     <App />
     <Intro />
     <Skills/>
+	<Education/>
+	<Experience />
     </div>
   </React.StrictMode>,
   document.getElementById('root')

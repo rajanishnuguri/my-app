@@ -72,6 +72,9 @@ padding-left: 50px;
     width: 4rem;
 
 }
+.experience{
+display:flex;
+}
 .skill-main{
 padding-left: 50px;
 padding-right: 50px;
@@ -100,6 +103,9 @@ font-size: 25px;
 display:block;
 }
 .intro-div{
+display:block;
+}
+.experience{
 display:block;
 }
 }
