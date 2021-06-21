@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import {Paper } from '@material-ui/core';
-import Swing from 'react-reveal/Swing';
+
 class Intro extends Component{
 render(){
     return(
 
     <div className="intro-main">
 
-    <span style={{color:"#ffffff",fontSize : '40px',fontWeight: "600",display:"flex"}}><Swing>Hi there</Swing>, I&lsquo;m Rajanish Nuguri<br /></span>
+    <span style={{color:"#ffffff",fontSize : '40px',fontWeight: "600",display:"flex"}}>Hi there, I&lsquo;m Rajanish Nuguri<br /></span>
     <br /><br /><br />
     <div className="intro-div">
         <Paper className="intro-paper" elevation={0} style={{backgroundColor:"#000000"}}>
