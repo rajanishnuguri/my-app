@@ -6,17 +6,17 @@ export default function Inro(){
   return(
 	 <div className="intro-main">
 
-    <span style={{color:"#ffffff",fontSize : '40px',fontWeight: "600",display:"flex"}}>Hi there, I&lsquo;m Rajanish Nuguri<br /></span>
+    <span style={{color:"#000000",fontSize : '40px',fontWeight: "600",display:"flex"}}>Hi there, I&lsquo;m Rajanish Nuguri<br /></span>
     <br /><br /><br />
     <div className="intro-div">
-        <Paper className="intro-paper" elevation={0} style={{backgroundColor:"#000000"}}>
+        <Paper className="intro-paper" elevation={0} style={{backgroundColor:"#ffffff"}}>
              <span style={{color:"#737373"}}>I&lsquo;m a </span>
-             <span style={{color:"#ffffff"}}>full-stack developer </span>
+             <span style={{color:"#000000"}}>full-stack developer </span>
              <span style={{color:"#737373"}}>interested in crafting </span>
              <span style={{color:"#737373"}}>software applications for small, medium, and big size companies and build </span>
-             <span style={{color:"#ffffff"}}>scalable software </span>
+             <span style={{color:"#000000"}}>scalable software </span>
              <span style={{color:"#737373"}}>for REST API&lsquo;s using springboot and TIBCO and some other cool </span>
-             <span style={{color:"#ffffff"}}>frameworks</span><br /><br />
+             <span style={{color:"#000000"}}>frameworks</span><br /><br />
              <div style={{display: "flex"}}>
                      <a href="https://github.com/rajanishnuguri"  target="_blank" rel="noopener noreferrer">
                      <i className="fa fa-github" ></i>
@@ -29,12 +29,12 @@ export default function Inro(){
                      </a>
               </div><br />
         </Paper>
-        <Paper className="intro-paper" elevation={0} style={{backgroundColor:"#000000"}}>
-            <span style={{color:"#ffffff"}}>Work History</span><br /><br />
-            <span style={{color:"#ffffff",fontSize : '15px',fontWeight: "600"}}>DAH2 India PVT LTD(DBS BANK)</span>
+        <Paper className="intro-paper" elevation={0} style={{backgroundColor:"#ffffff"}}>
+            <span style={{color:"#000000"}}>Work History</span><br /><br />
+            <span style={{color:"#000000",fontSize : '15px',fontWeight: "600"}}>DAH2 India PVT LTD(DBS BANK)</span>
             <span style={{color:"#737373",fontSize : '13px',fontWeight: "550",float: "right"}}>2019-2021</span><br />
             <span style={{color:"#737373",fontSize : '13px',fontWeight: "550"}}>Analyst/Application Developer</span><br /><br />
-            <span style={{color:"#ffffff",fontSize : '15px',fontWeight: "600"}}>TIBCO Software India PVT LTD</span>
+            <span style={{color:"#000000",fontSize : '15px',fontWeight: "600"}}>TIBCO Software India PVT LTD</span>
             <span style={{color:"#737373",fontSize : '13px',fontWeight: "550",float: "right"}}>2015-2019</span><br />
             <span style={{color:"#737373",fontSize : '13px',fontWeight: "550"}}>Senior Associate Consultant</span><br /><br />
         </Paper>

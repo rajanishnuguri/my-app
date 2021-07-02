@@ -1,6 +1,7 @@
 import React from 'react';
+import {Paper } from '@material-ui/core';
+import me from '../me.png';
 
-import ProgressBar from 'react-animated-progress-bar';
 
 export default function Skills(){
 	  
@@ -15,27 +16,29 @@ const skills = [
   { name: "TIBCO BW 6.x", rating: 70},
   { name: "TIBCO EMS", rating: 70},
 ];
-    return( <div className="skill-main"><br /><br />
-    <span style={{color:"#ffffff",fontSize : '30px',fontWeight: "600"}}>Proficiency</span>
-           {skills.sort((a, b) => (a.rating < b.rating) ? 1 : -1).map(skill  => {
-           return(
-                 <div style={{display: "flex",marginBottom:"-15%",marginTop:"7%"}}>
-                   
-					<div  style={{color:"#ffffff",backgroundColor:"green",textAlign:"center",marginTop:"54px",lineHeight:"25px",marginRight: "0px",height: "20%", width: "100px",boxSizing: "border-box"}}>
-					{skill.name}</div>
-					<ProgressBar
-        width="60%"
-        height="25px"
-        rect
-        fontColor="#000000"
-        percentage={skill.rating}
-        trackPathColor="transparent"
-        backgroundColor="green"
-        trackBorderColor="grey"
-      />
-                  </div>
-                 );
-                     })}
-            </div>
+    return( 
+	
+	
+	<div className="skill-main"><br /><br />
+	<Paper className="skill-paper" elevation={0}>
+
+	<img style={{height:"50%",width:"280px",marginLeft:"auto",marginRight:"auto",display:"block"}}src={me} alt="me"/>
+	<div style={{fontWeight: "700",fontFamily: "Raleway-bold",color: "#616161",fontSize:"23px",textAlign:"center",paddingTop:"20px"}}>Who's this guy?</div>
+	</Paper>
+	<Paper className="skill-paper" elevation={0}>
+	{skills.sort((a, b) => (a.rating < b.rating) ? 1 : -1).map(skill  => {
+           return(<div class="meter">
+	
+	<span style={{width: `${skill.rating}%`}}>
+	
+	<div style={{justifyContent:"center",height:"100%",width:"120px",color:"#ffffff",display: "inline-block",position: "absolute",left: "0", backgroundColor: "#04c2c9",textAlign: "center"}}>{skill.name}</div>
+	
+</span>
+	
+</div>
+);
+                     })}</Paper>
+</div>
+
     );
 }

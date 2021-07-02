@@ -30,7 +30,20 @@ render(){
 
 return (
 <div >
-    <AppBar style={{backgroundColor:"#4d4d4d"}} position="fixed">
+<div className="canvas-back" style={{width: "100%", height: "600px"}}>
+<div className="flex">
+          <div className="text">
+            Hello, I'm <span className="highlight">Rajanish Nuguri</span>.
+            <br />
+            I&lsquo;m a full-stack developer.
+          </div>
+			<br /><br />
+          <div className="button page-link" dest="about">
+            View my work <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+</div>
+    <AppBar style={{    borderBottom: "3px solid #04c2c9",backgroundColor:"#4d4d4d"}} position="relative">
 	<Switch>
 	
             </Switch>
@@ -86,12 +99,7 @@ return (
          </Toolbar>
 
     </AppBar>
-	<Route path="/">
-                <Route path="/" component={Intro} exact />
-                <Route path="/skills" component={Skills} />
-                <Route path="/education" component={Education} />
-				<Route path="/experience" component={Experience} />
-				</Route>
+	
     </div>
     );
   }

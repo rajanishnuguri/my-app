@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
+import Skills from './Components/Skills';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
@@ -10,6 +11,7 @@ ReactDOM.render(
   <div style={{display:"block"}}>
      <BrowserRouter>
         <App />
+		<Skills />
     </BrowserRouter>
     </div>
   </React.StrictMode>,
