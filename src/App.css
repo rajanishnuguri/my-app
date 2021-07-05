@@ -21,8 +21,9 @@
     cursor: pointer;
     display: inline-block;
     font-size: 13pt;
-    padding: 10px 20px;
     transition: all 0.5s;
+    padding: 5px 20px 10px 15px;
+    font-size: 16pt;
 }
 .button:hover .fas {
     transform: rotate(
@@ -39,11 +40,15 @@
     background-color: #04c2c9;
     border-color: #04c2c9;
 }
+.text{
+    color: #ffffff;
+}
  .canvas-back{
-	 background: url('./backgound.png');
-	 background-repeat: no-repeat;
-  background-size: 100% 100%;
-  color: #ffffff
+	 background: url('./backgound.png') no-repeat center center/cover;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-size: cover;
  }
  .logo-name {
     font-weight: 700;

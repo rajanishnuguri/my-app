@@ -1,36 +1,48 @@
-import React, {Component} from 'react';
+import React, {useState ,useEffect, useRef} from 'react';
 import './App.css';
 import {AppBar,Toolbar,Grid,IconButton,List,ListItem,ListItemText,Drawer,Divider } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import Intro from './Components/Intro';
+//import Intro from './Components/Intro';
 import Skills from './Components/Skills';
-import Education from './Components/Education';
+//import Education from './Components/Education';
 import Experience from './Components/Experience';
-import {  Route, Switch } from 'react-router-dom';
+import {   Switch } from 'react-router-dom';
+import useWindowDimensions from "./Utils/useWindowDimensions";
 
-class App extends Component{
-constructor(props) {
-    super(props);
-    this.state = {open: false};
+export default function App(){
+
+    const [open, setOpen] = useState(false);
+    const [position, setPosition] = useState("relative");
+    const navRef = useRef();
+
+    useEffect(() => {
+        const handleScroll = (e) => {
+            if (window.scrollY >= 0 && window.scrollY <= window.innerHeight ) {
+                setPosition("relative");
+            } else if (navRef.current.offsetTop - window.innerHeight / 20 ) {
+                setPosition("fixed");
+            } else {
+                setPosition("relative");
+            }
+        }
+        document.addEventListener('scroll', handleScroll);
+        return () => {
+            document.removeEventListener('scroll', handleScroll);
+        }
+    }, [])
+
+    function handleDrawerOpen(){
+  setOpen(true);
+  }
+    function handleDrawerClose(){
+       setOpen(false);
   }
 
-
-   handleDrawerOpen= () =>{
-  this.setState({open: true});
-  }
-   handleDrawerClose= () => {
-   this.setState({open: false});
-  }
-   handleChange(e) { 
-    console.log(e.target.getAttribute("value"));
-  }
-render(){
-
-
+    const { height, width } = useWindowDimensions();
 return (
 <div >
-<div className="canvas-back" style={{width: "100%", height: "600px"}}>
+<div className="canvas-back" style={{width: `${width}px`, height: `${height}px`}}>
 <div className="flex">
           <div className="text">
             Hello, I'm <span className="highlight">Rajanish Nuguri</span>.
@@ -38,12 +50,12 @@ return (
             I&lsquo;m a full-stack developer.
           </div>
 			<br /><br />
-          <div className="button page-link" dest="about">
+          <div className="button page-link text" href="#skillView" >
             View my work <i class="fas fa-arrow-right"></i>
           </div>
         </div>
 </div>
-    <AppBar style={{    borderBottom: "3px solid #04c2c9",backgroundColor:"#4d4d4d"}} position="relative">
+    <AppBar ref={navRef} style={{ width: `${width}px`,borderBottom: "3px solid #04c2c9",backgroundColor:"#4d4d4d"}} position={position}>
 	<Switch>
 	
             </Switch>
@@ -67,17 +79,17 @@ return (
       </ul>
 </div>
                          <div className="menu-icon">
-                           <IconButton id="icon-btn" color="inherit"  aria-label="menu" onClick={this.handleDrawerOpen}>
+                           <IconButton id="icon-btn" color="inherit"  aria-label="menu" onClick={handleDrawerOpen}>
                                                      <MenuIcon />
                                                    </IconButton>
                            <Drawer
 
                                  variant="persistent"
                                  anchor="right"
-                                 open={this.state.open}
+                                 open={open}
 
                                >
-<IconButton onClick={this.handleDrawerClose}>
+<IconButton onClick={handleDrawerClose}>
             <ChevronRightIcon />
           </IconButton>
 
@@ -99,11 +111,12 @@ return (
          </Toolbar>
 
     </AppBar>
-	
+    <Skills id="skillView" />
+    <Experience />
     </div>
     );
-  }
+
 }
 
 
-export default App;
+

@@ -10,13 +10,6 @@ export default function Inro(){
     <br /><br /><br />
     <div className="intro-div">
         <Paper className="intro-paper" elevation={0} style={{backgroundColor:"#ffffff"}}>
-             <span style={{color:"#737373"}}>I&lsquo;m a </span>
-             <span style={{color:"#000000"}}>full-stack developer </span>
-             <span style={{color:"#737373"}}>interested in crafting </span>
-             <span style={{color:"#737373"}}>software applications for small, medium, and big size companies and build </span>
-             <span style={{color:"#000000"}}>scalable software </span>
-             <span style={{color:"#737373"}}>for REST API&lsquo;s using springboot and TIBCO and some other cool </span>
-             <span style={{color:"#000000"}}>frameworks</span><br /><br />
              <div style={{display: "flex"}}>
                      <a href="https://github.com/rajanishnuguri"  target="_blank" rel="noopener noreferrer">
                      <i className="fa fa-github" ></i>
