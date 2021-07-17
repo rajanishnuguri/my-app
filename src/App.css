@@ -43,6 +43,9 @@
 .text{
     color: #ffffff;
 }
+.main-anchor:hover{
+    all:unset!important;
+}
  .canvas-back{
 	 background: url('./backgound.png') no-repeat center center/cover;
      -webkit-background-size: cover;
@@ -79,8 +82,8 @@ ul li{
 font-family: Montserrat,sans-serif;
 
 }
-a:hover{
-background-color: #ddd;
+.menu a:hover{
+    color: #e31b6d;
 }
 
 a{
@@ -121,6 +124,49 @@ padding-left: 50px;
 	display: inline-block;
 	margin-right: 50px;
 	margin-left: 50px;
+    font-family: "Raleway-bold";
+   justify-content: center;
+}
+.icons {
+    background: #262f38;
+    cursor: pointer;
+    font-size: 18pt;
+    height: 55px;
+    margin: 0 15px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    width: 55px;
+}
+.icons:hover  {
+    background-color: #1baef5;
+
+}
+.fas .fab .far {
+    display: inline-block;
+    font: normal normal normal 24px/1 "Font Awesome 5 Free";
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+}
+.flex {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+footer .footnote {
+    color: #ced2d2;
+    font-size: 15pt;
+    margin-top: 35px;
+    opacity: 0.6;
+}
+footer .footnote .highlight {
+    color: #e31b6d;
+    font-family: "Open Sans";
 }
 .experience{
 display:flex;
@@ -130,14 +176,50 @@ padding-left: 50px;
 padding-right: 50px;
 padding-top: 100px;
 }
+
+.card-main {
+     max-width: 600px;
+     height: 500px;
+     display: inline-block;
+     margin-right: 20px;
+     margin-left: 20px;
+     margin-bottom: 20px;
+ }
 .meter { 
 width: 100%;
-  height: 25px;  
-  position: relative;
+  height: 30px;
   background: #eee;
   box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
   margin-bottom: 15px;
-  font-family: "Raleway-bold";
+    transition: 1.1s 0.2s width ease-in-out;
+}
+
+.progress {
+    animation: progressBar 2s ease-in-out;
+    animation-fill-mode:unset;
+}
+
+@keyframes progressBar {
+    0% { width: 0; }
+}
+.wave {
+    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;        /* Change to speed up or slow down */
+    animation-iteration-count: infinite;  /* Never stop waving :) */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+    10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+    20% { transform: rotate(-8.0deg) }
+    30% { transform: rotate(14.0deg) }
+    40% { transform: rotate(-4.0deg) }
+    50% { transform: rotate(10.0deg) }
+    60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+    100% { transform: rotate( 0.0deg) }
 }
 .meter > span {
   display: inline-block;
@@ -181,8 +263,29 @@ display:block;
 .skill-paper {
 	width: 100%;
 	display: block;
-	
-	margin-right: 200px;
-	margin-left: 50px;
+	margin-right: 0px;
+	margin-left: 0px;
+    margin-Bottom: 40px;
 }
+    .text {
+        font-size: 16pt;
+        line-height: 20pt;
+
+    }
+    .flex {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .text-margin{
+        margin-top: 200px;
+    }
+    .mobile-nav a{
+        text-decoration:none;
+        padding: 5px 10px 5px 10px;
+        color: #000000;
+    }
+
 }

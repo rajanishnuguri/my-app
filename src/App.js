@@ -1,22 +1,21 @@
-import React, {useState ,useEffect, useRef} from 'react';
+import React, {useState , useRef} from 'react';
 import './App.css';
 import {AppBar,Toolbar,Grid,IconButton,List,ListItem,ListItemText,Drawer,Divider } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-//import Intro from './Components/Intro';
+import Contac from './Components/Contac';
 import Skills from './Components/Skills';
-//import Education from './Components/Education';
+
 import Experience from './Components/Experience';
-import {   Switch } from 'react-router-dom';
 import useWindowDimensions from "./Utils/useWindowDimensions";
 
 export default function App(){
 
     const [open, setOpen] = useState(false);
-    const [position, setPosition] = useState("relative");
+    const [position] = useState("fixed");
     const navRef = useRef();
 
-    useEffect(() => {
+  /*  useEffect(() => {
         const handleScroll = (e) => {
             if (window.scrollY >= 0 && window.scrollY <= window.innerHeight ) {
                 setPosition("relative");
@@ -30,7 +29,7 @@ export default function App(){
         return () => {
             document.removeEventListener('scroll', handleScroll);
         }
-    }, [])
+    }, [])*/
 
     function handleDrawerOpen(){
   setOpen(true);
@@ -41,24 +40,22 @@ export default function App(){
 
     const { height, width } = useWindowDimensions();
 return (
-<div >
+<div id="mainView" >
 <div className="canvas-back" style={{width: `${width}px`, height: `${height}px`}}>
 <div className="flex">
-          <div className="text">
-            Hello, I'm <span className="highlight">Rajanish Nuguri</span>.
+          <div className="text text-margin">
+            Hello there!  <i className="fas fa-hand-spock wave"></i>
+              <br />I'm <span className="highlight">Rajanish Nuguri</span>.
             <br />
-            I&lsquo;m a full-stack developer.
+            Full-stack developer.
           </div>
 			<br /><br />
-          <div className="button page-link text" href="#skillView" >
-            View my work <i class="fas fa-arrow-right"></i>
+          <div className="button page-link text"  >
+            <a className="main-anchor" href="#skillView" > View my work <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
 </div>
     <AppBar ref={navRef} style={{ width: `${width}px`,borderBottom: "3px solid #04c2c9",backgroundColor:"#4d4d4d"}} position={position}>
-	<Switch>
-	
-            </Switch>
     <Toolbar>
 <Grid
       justify="space-between"
@@ -71,11 +68,10 @@ return (
     <Grid >
     <div id="menu" className="menu">
      <ul>
-        <li><a href="/" >About Me</a></li>
-        <li><a href="/skills">Skills</a></li>
-        <li><a href="/experience">Experience</a></li>
-        <li><a href="/education">Education</a></li>
-        <li><a href="#Resume">Resume</a></li>
+        <li><a href="#skillView" >About Me</a></li>
+        <li><a href="#workView">Work</a></li>
+        <li><a href="#contactView">Contact Me</a></li>
+        <li><a href="https://drive.google.com/file/d/11wgZkllJtm7eACI5c1iwupHvdeJD22fV/view?usp=sharing" download="Rajanish's Resume.pdf">Resume</a></li>
       </ul>
 </div>
                          <div className="menu-icon">
@@ -96,14 +92,22 @@ return (
         <Divider />
 
 
-                                 <List component="nav">
-                                   {['About Me','Skills', 'Experience', 'Achievements', 'Resume'].map((text, index) => (
-                                     <ListItem button key={text}>
-                                       <ListItemText primary={text} />
+                                 <List component="nav" className="mobile-nav">
+                                     <ListItem  >
+                                         <a href="#skillView" > <ListItemText primary="About Me" /></a>
                                      </ListItem>
-                                   ))}
+                                     <ListItem >
+                                         <a href="#workView"> <ListItemText primary="Work" /></a>
+                                     </ListItem>
+                                     <ListItem >
+                                         <a href="#contactView"><ListItemText primary="Contact Me" /></a>
+                                     </ListItem>
+                                     <ListItem >
+                                         <a href="https://drive.google.com/file/d/11wgZkllJtm7eACI5c1iwupHvdeJD22fV/view?usp=sharing" download="Rajanish's Resume.pdf">
+                                             <ListItemText primary="Resume" />
+                                         </a>
+                                     </ListItem>
                                  </List>
-
                                </Drawer>
                           </div>
               </Grid>
@@ -112,7 +116,8 @@ return (
 
     </AppBar>
     <Skills id="skillView" />
-    <Experience />
+    <Experience id="workView"/>
+    <Contac id="contactView"/>
     </div>
     );
 
