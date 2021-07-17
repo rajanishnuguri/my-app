@@ -4,6 +4,20 @@
     font-weight: normal;
     src: local('Agustina Regular'), url('./fonts/Agustina.woff') format('woff');
     }
+#myVideo {
+    position: absolute;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background-size: cover;
+    overflow: hidden;
+}
+video {
+    filter: brightness(40%);
+}
  .flex {
 	 padding-top: 15%;
     align-items: center;
@@ -47,7 +61,7 @@
     all:unset!important;
 }
  .canvas-back{
-	 background: url('./backgound.png') no-repeat center center/cover;
+	 background:  no-repeat center center/cover;
      -webkit-background-size: cover;
      -moz-background-size: cover;
      -o-background-size: cover;

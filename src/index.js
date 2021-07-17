@@ -11,7 +11,6 @@ ReactDOM.render(
   <div style={{display:"block"}}>
      <BrowserRouter>
         <App />
-
     </BrowserRouter>
     </div>
   </React.StrictMode>,

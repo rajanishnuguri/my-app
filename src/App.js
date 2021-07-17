@@ -5,7 +5,6 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import Contac from './Components/Contac';
 import Skills from './Components/Skills';
-
 import Experience from './Components/Experience';
 import useWindowDimensions from "./Utils/useWindowDimensions";
 
@@ -42,6 +41,8 @@ export default function App(){
 return (
 <div id="mainView" >
 <div className="canvas-back" style={{width: `${width}px`, height: `${height}px`}}>
+    <video autoPlay muted loop id="myVideo" src="https://drive.google.com/uc?export=download&id=1ZD4PUadjmYk3jIvRYuHaAR8OH5ifD5up" >
+    </video>
 <div className="flex">
           <div className="text text-margin">
             Hello there!  <i className="fas fa-hand-spock wave"></i>
