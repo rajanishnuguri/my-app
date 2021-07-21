@@ -1,5 +1,6 @@
 .experience-cards-div {
     display: flex;
+    justify-content: center;
 
 }
 .experience-card, .experience-card-dark {
